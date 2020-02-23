@@ -32,8 +32,28 @@ namespace CSharp_Exercises_Loops_SimonHC
             /* Console.WriteLine(SumAndAverage(11, 66));
              Console.WriteLine(SumAndAverage(-10, 0));*/
             //Opgave09
-            DrawTriangle();
+            // DrawTriangle();
+            //Opgave10
+            Console.WriteLine(ToThePowerOf(-2, 3));
+            Console.WriteLine(ToThePowerOf(5, 5));
             Console.ReadLine();
+        }
+        static int ToThePowerOf(int a, int b)
+        {
+            //Eksempel:
+            //a = 2
+            //b = 3
+            //i: 0 -> 1 -> 2 (3 iterationer)
+            //i0: 1 = 1 * 2 --> 2
+            //i1: 2 = 2 * 2 --> 4
+            //i2: 4 = 4 * 2 --> 8 
+            //Efter 3 iterationer: 1 --> 8
+            int Power = 1;
+            for (int i = 0; i < b; i++)
+            {
+                Power *= a;
+            }
+            return Power;
         }
         static void DrawTriangle()
         {
